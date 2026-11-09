@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mark Chester Samaniego — Frontend Developer / Team Lead</title>
-<meta name="description" content="iGaming frontend developer and team lead. 12+ years building browser-based slots and table games with PixiJS, TypeScript and Phaser.">
+<meta name="description" content="Frontend team lead with 15+ years in interactive web development, building browser-based slot, RNG and live table games with PixiJS, Phaser, TypeScript and Playwright.">
 <meta property="og:title" content="Mark Chester Samaniego — Frontend Developer / Team Lead">
-<meta property="og:description" content="12+ years building browser-based slots and table games. Owner of a shared TypeScript game platform behind 80+ titles.">
+<meta property="og:description" content="15+ years in interactive web development. Maintains the shared TypeScript / JavaScript game platform behind 100+ slot and table games.">
 <meta property="og:type" content="website">
 <style>
 :root{--bg:#0b0d17;--card:#141828;--text:#e8eaf3;--muted:#9aa1bd;--accent:#f5b83d;--accent2:#7c5cff;--line:#232843}
@@ -50,6 +50,10 @@ section{padding:56px 0}h2{font-size:28px;margin:0 0 6px}.sub{color:var(--muted);
 .shot .im{aspect-ratio:16/9;background:linear-gradient(135deg,var(--accent2),#1b1f3a);display:grid;place-items:center;position:relative}
 .shot img{width:100%;height:100%;object-fit:cover;display:block}
 .shot .im.missing img{display:none}.shot .im.missing::after{content:"Screenshot coming soon";color:#ffffffaa;font-size:14px}
+.shot .im.icon{background:radial-gradient(circle at 50% 40%,color-mix(in srgb,var(--accent2) 45%,transparent),#10152b 75%)}
+.shot .im.icon{overflow:hidden}
+.shot .im.icon img{position:absolute;inset:0;object-fit:contain;padding:12px}
+.shot .meta span{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 .shot .meta{padding:12px 14px}.shot .meta b{display:block}.shot .meta span{color:var(--muted);font-size:13px}
 .lb{position:fixed;inset:0;background:#000d;display:none;place-items:center;z-index:20;padding:20px;cursor:zoom-out}
 .lb.on{display:grid}.lb img{max-width:100%;max-height:90vh;border-radius:10px}
@@ -63,40 +67,41 @@ footer{border-top:1px solid var(--line);padding:32px 0;color:var(--muted);font-s
 <div><a href="#about">About</a><a href="#work">Work</a><a href="#games">Games</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#contact">Contact</a></div></div></nav>
 
 <header class="hero"><div class="wrap">
-<div class="tag">iGaming · Frontend · Team Lead</div>
+<div class="tag">iGaming · Game Developer · Team Lead</div>
 <h1>Mark Chester Samaniego</h1>
-<p>Frontend Developer and Team Lead with 12+ years building browser-based slots and table games. I own the shared TypeScript game platform behind 80+ titles and lead the developers and QA who ship them.</p>
-<div class="btns"><a class="btn p" href="#games">View games</a><a class="btn" href="https://digitalwin.com/play-demo/" target="_blank" rel="noopener">Play live demos ↗</a><a class="btn" href="#contact">Get in touch</a></div>
+<p>Frontend Team Lead and Game Developer with 15+ years in interactive web development. I build browser-based slot, RNG and live table games hands-on, maintain the shared TypeScript / JavaScript game platform behind 100+ titles, and lead the developers and QA who ship them.</p>
+<div class="btns"><a class="btn p" href="#games">View games</a><a class="btn" href="#contact">Get in touch</a></div>
 <div class="stats">
-<div class="stat"><b>12+</b><span>years in iGaming</span></div>
-<div class="stat"><b>80+</b><span>slot, RNG table &amp; live table games</span></div>
-<div class="stat"><b>3</b><span>engines: PixiJS, EaselJS, Phaser</span></div>
+<div class="stat"><b>15+</b><span>years in interactive web development</span></div>
+<div class="stat"><b>100+</b><span>slot, RNG table &amp; live table games</span></div>
 <div class="stat"><b>2014</b><span>with Globalnet Solutions Group</span></div>
 </div></div></header>
 
 <section id="about"><div class="wrap">
 <h2>About</h2><p class="sub">Based in the Philippines · Open to remote opportunities</p>
-<p style="max-width:760px">My background is frontend: ActionScript, then HTML5/JS/CSS, with some PHP and Vue 3 along the way. Today I build casino games in TypeScript on PixiJS v8, with Phaser and EaselJS in the mix. I created and maintain the baseclass that all our slots run on, built template slots for the team to reuse, and I’m the escalation point for the hard bugs: rendering, reels, server integration, deployment, anything that’s stuck.</p>
-<p style="max-width:760px;color:var(--muted)">I moved from writing games to leading the people who write them without giving up the code. I still ship features and debug alongside the team, while keeping delivery predictable: clear priorities, reusable building blocks, and QA automation that catches regressions before players do.</p>
+<p style="max-width:760px">My background is frontend: Flash and ActionScript, then HTML5/JS/CSS, with some PHP and Vue 3 along the way. Today I build casino games in TypeScript on PixiJS, with Phaser and CreateJS / EaselJS in the mix. I created and maintain the baseclasses that all our slots and table games run on, and built template slots and table games for the team to reuse. I manage the full game development life cycle, from requirements and design through development, certification and deployment, and I mentor fellow developers.</p>
 <h3 style="margin:28px 0 4px;font-size:18px">Highlights</h3>
 <ul class="list">
-<li>Designed the shared TypeScript game platform that 80+ slot and table titles are built on.</li>
-<li>Cut new-game effort by turning common slot patterns into reusable template slots and subclassable baseclasses.</li>
-<li>Introduced Playwright-based canvas testing so slot behaviour can be verified automatically.</li>
-<li>Improved the release pipeline with cache-busting so players always load the latest build.</li>
-<li>Lead and mentor a team of developers and QA across the full delivery cycle.</li>
+<li>Maintain the shared TypeScript / JavaScript game platform that 100+ slot and table titles are built on, with dedicated baseclasses for PixiJS, EaselJS and Phaser.</li>
+<li>Cut new-game effort with reusable template slots, subclassable baseclasses, popups, betting controls, preloaders and feature displays.</li>
+<li>Built a Playwright canvas-testing framework, with AI-assisted test authoring, that catches regressions before manual QA.</li>
+<li>Lead the team’s use of Claude for coding and testing: guidelines for AI-generated code, review before release, and tools that improve development efficiency.</li>
+<li>Lead and mentor a team of developers and QA across the full delivery cycle, working with the Game Director, artists and backend developers.</li>
+<li>Manage release readiness and cache-busted deployments, and coordinate with external testing and compliance contacts for certification.</li>
+<li>Maintain codebase maps, repository ownership notes and onboarding guides so new developers ramp up quickly.</li>
 </ul>
 </div></section>
 
 <section id="work"><div class="wrap">
 <h2>What I do</h2><p class="sub">Engineering, architecture and team leadership</p>
 <div class="grid">
-<div class="card"><h3>Shared game platform</h3><p>Owner of the TypeScript platform spanning PixiJS, EaselJS and Phaser, each with its own shared baseclass, so new titles are built as lightweight subclasses.</p></div>
-<div class="card"><h3>Slots &amp; table games</h3><p>Slot, RNG table and live table games with Spine animation, GSAP-driven sequences and data-driven UI styled with UnoCSS.</p></div>
-<div class="card"><h3>QA automation</h3><p>Automated test infrastructure, including Playwright-based canvas testing for slot games.</p></div>
-<div class="card"><h3>Server &amp; RGS integration</h3><p>Communication layer and PHP gateway connecting game clients to slot and table game endpoints.</p></div>
-<div class="card"><h3>Deploy pipeline</h3><p>Cache-busting and release improvements so players always get the latest build.</p></div>
-<div class="card"><h3>Team leadership</h3><p>Day-to-day management of developers and QA, unblocking the team and resolving the hardest issues.</p></div>
+<div class="card"><h3>Shared game platform</h3><p>Maintainer of the TypeScript / JavaScript platform behind 100+ titles, with dedicated baseclasses for PixiJS, EaselJS and Phaser, so new games are built as lightweight subclasses.</p></div>
+<div class="card"><h3>Slots &amp; table games</h3><p>Slot, RNG table and live table games: reel mechanics, bonus features, game flow, animation, UI/UX and audio, with Spine, GSAP and data-driven UI styled with UnoCSS.</p></div>
+<div class="card"><h3>QA automation</h3><p>Playwright canvas-testing framework for gameplay scenarios, with AI-assisted test authoring to catch regressions before manual QA.</p></div>
+<div class="card"><h3>AI-assisted development</h3><p>Guidelines for AI-generated code, review and refinement before release, and in-house tools that make the team faster with Claude.</p></div>
+<div class="card"><h3>Server &amp; RGS integration</h3><p>Shared communication layer and PHP gateway connecting game clients to the RGS for bets, balances and results.</p></div>
+<div class="card"><h3>Release &amp; certification</h3><p>Reliable build delivery with cache-busting, release readiness, and coordination with external testing and compliance contacts.</p></div>
+<div class="card"><h3>Team leadership</h3><p>Day-to-day management of developers and QA, onboarding and documentation, unblocking the team and resolving the hardest issues.</p></div>
 </div></div></section>
 
 <section id="games"><div class="wrap">
@@ -116,29 +121,43 @@ footer{border-top:1px solid var(--line);padding:32px 0;color:var(--muted);font-s
 
 <section id="skills"><div class="wrap">
 <h2>Skills</h2><p class="sub">Tools I use every day</p>
-<div class="skillrow"><h3>Game development</h3><div class="chips"><span class="chip">PixiJS v8</span><span class="chip">TypeScript</span><span class="chip">GSAP</span><span class="chip">Spine (spine-pixi-v8)</span><span class="chip">Phaser</span><span class="chip">EaselJS</span></div></div>
-<div class="skillrow"><h3>Frontend</h3><div class="chips"><span class="chip">HTML5</span><span class="chip">JavaScript</span><span class="chip">CSS / UnoCSS</span><span class="chip">Vue 3</span><span class="chip">ActionScript</span></div></div>
-<div class="skillrow"><h3>Quality &amp; backend</h3><div class="chips"><span class="chip">Playwright</span><span class="chip">Test automation</span><span class="chip">PHP</span><span class="chip">RGS integration</span></div></div>
+<div class="skillrow"><h3>Game &amp; animation</h3><div class="chips"><span class="chip">PixiJS</span><span class="chip">Phaser 3</span><span class="chip">CreateJS / EaselJS</span><span class="chip">GSAP</span><span class="chip">Spine</span><span class="chip">Flash / ActionScript 2 &amp; 3 (legacy)</span></div></div>
+<div class="skillrow"><h3>Languages &amp; web</h3><div class="chips"><span class="chip">TypeScript</span><span class="chip">JavaScript (ES6+)</span><span class="chip">HTML5</span><span class="chip">CSS / UnoCSS</span><span class="chip">PHP</span><span class="chip">Vue 3</span></div></div>
+<div class="skillrow"><h3>Quality, shared frameworks &amp; leadership</h3><div class="chips"><span class="chip">Playwright</span><span class="chip">Manual &amp; automated testing</span><span class="chip">Baseclasses &amp; templates</span><span class="chip">RGS integration</span><span class="chip">Team leadership</span><span class="chip">Technical documentation</span><span class="chip">Developer onboarding</span><span class="chip">AI-assisted coding &amp; testing (Claude)</span></div></div>
 </div></section>
 
 <section id="experience"><div class="wrap">
-<h2>Experience</h2><p class="sub">Over a decade with one studio, growing from developer to team lead</p>
+<h2>Experience</h2><p class="sub">Interactive web development since 2006, in iGaming since 2014</p>
 <div class="timeline"><small>Feb 2014 — Present</small><h3>Frontend Developer Team Lead · Globalnet Solutions Group Inc.</h3>
-<p style="color:var(--muted);max-width:720px;margin:4px 0 0">Lead the frontend and QA team delivering 80+ slot, RNG table and live table games.</p>
+<p style="color:var(--muted);max-width:720px;margin:4px 0 0">Browser-based casino slot games, RNG and live table games, landing pages and a sportsbook website.</p>
 <ul>
-<li>Created and maintain the shared TypeScript baseclasses for PixiJS, EaselJS and Phaser games.</li>
-<li>Built template slots and reusable modules so new games ship faster with less duplicated code.</li>
-<li>Own the server communication layer and PHP gateway between game clients and RGS endpoints.</li>
-<li>Set up Playwright-based canvas testing and improved build cache-busting and deployment.</li>
-<li>Manage day-to-day priorities for developers and QA, remove blockers and resolve the hardest bugs.</li>
+<li>Lead frontend developers and QA delivering slot, RNG table and live table games from requirements through release, and help resolve complex technical issues.</li>
+<li>Lead the team’s use of Claude for coding and testing: guidelines for AI-generated code, review and refinement before release, and tools that improve efficiency.</li>
+<li>Develop HTML5 slot games in TypeScript / JavaScript with PixiJS, Phaser and CreateJS, covering reel mechanics, bonus features, game flow, animation, UI/UX and audio, with the Game Director, artists, backend developers and QA.</li>
+<li>Maintain the shared game platform behind 100+ titles, with baseclasses for PixiJS, EaselJS and Phaser and reusable popups, betting controls, preloaders and feature displays.</li>
+<li>Integrate games with the RGS through a shared communication layer and PHP gateway for bets, balances and results.</li>
+<li>Build and maintain a Playwright canvas-testing framework for gameplay scenarios, with AI-assisted test authoring.</li>
+<li>Optimise performance, asset loading and responsiveness across desktop and mobile; review code and work with QA to reproduce and verify fixes.</li>
+<li>Manage deployment and release readiness, including cache-busting, and coordinate with external testing and compliance contacts for certification.</li>
+<li>Maintain codebase maps, repository ownership notes, development guides and onboarding documentation.</li>
 </ul></div>
+<div class="timeline" style="margin-top:32px"><small>Sep 2009 — Nov 2011</small><h3>Junior Web Developer · Optimind Technology Solutions</h3>
+<ul><li>Developed and maintained HTML- and Flash-based websites, and tested, debugged and troubleshot issues for functionality and compatibility, working with web designers and clients.</li></ul></div>
+<div class="timeline" style="margin-top:32px"><small>Nov 2007 — Dec 2008</small><h3>Ad Builder · Wide-out Workforces Inc.</h3>
+<ul><li>Built interactive Flash advertising for DoubleClick clients: rich media, expandable, floating and in-page formats, galleries, video and games, with tracking counters and fixes from client feedback.</li></ul></div>
+<div class="timeline" style="margin-top:32px"><small>Jul 2006 — Jun 2007</small><h3>Technical Support Engineer · Trend Micro Inc.</h3>
+<ul><li>First-level technical support for installation, configuration, virus removal, registration and activation.</li></ul></div>
+<div class="timeline" style="margin-top:32px"><small>2011 — Present</small><h3>Freelance Interactive Developer</h3>
+<ul><li>Memory Max, an Adobe AIR desktop app with 60 animated lessons and 130 interactive games.</li>
+<li>Facebook applications: Uniqlo U-SHOP U-WIN, Fiesta Super Mom Quiz, Fiesta Greeting Cards, Master School of Awesome, San Mig Light Getting Light and Hizon Catering Win a Wedding.</li></ul></div>
+<p style="color:var(--muted);margin:32px 0 0"><b style="color:var(--text)">Education:</b> BS in Computer Information Systems, Centro Escolar University (2002 – 2006) · Cisco graduate</p>
 </div></section>
+
 
 <section id="contact"><div class="wrap">
 <h2>Let’s talk</h2><p class="sub">Open to remote iGaming and game-dev roles.</p>
 <div class="btns" style="margin-top:0">
-<a class="btn p" href="mailto:YOUR_EMAIL@example.com">YOUR_EMAIL@example.com</a>
-<a class="btn" href="https://www.linkedin.com/in/YOUR-PROFILE" target="_blank" rel="noopener">LinkedIn ↗</a>
+<a class="btn p" href="mailto:emcee35789@gmail.com">emcee35789@gmail.com</a>
 <a class="btn" href="https://digitalwin.com/play-demo/" target="_blank" rel="noopener">Portfolio demos ↗</a>
 <a class="btn" href="resume.pdf">Download résumé</a>
 </div></div></section>
@@ -154,8 +173,10 @@ function render(f){
   const d=document.createElement("a");d.className="shot";d.href="game.html?id="+encodeURIComponent(g.id);
   d.innerHTML='<div class="im"><img loading="lazy" alt=""><span class="play">▶ Details &amp; video</span></div><div class="meta"><em></em><b></b><span></span></div>';
   const im=d.querySelector("img");im.alt=g.title+" screenshot";
-  im.onerror=()=>im.parentElement.classList.add("missing");im.src=g.thumb;
-  d.querySelector("em").textContent=g.type;d.querySelector("b").textContent=g.title;d.querySelector("span").textContent=g.tagline;
+  const wrap=im.parentElement;
+  im.onerror=()=>{if(wrap.classList.contains("icon")&&g.thumb){wrap.classList.remove("icon");im.src=g.thumb}else wrap.classList.add("missing")};
+  if(g.icon)wrap.classList.add("icon");im.src=g.icon||g.thumb;
+  d.querySelector("em").textContent=g.type;d.querySelector("b").textContent=g.title;d.querySelector(".meta span").textContent=g.tagline;
   box.appendChild(d);
  });
 }
