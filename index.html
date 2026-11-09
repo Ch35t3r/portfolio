@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mark Chester Samaniego — Frontend Developer / Team Lead</title>
+<meta name="description" content="iGaming frontend developer and team lead. 12+ years building browser-based slots and table games with PixiJS, TypeScript and Phaser.">
+<meta property="og:title" content="Mark Chester Samaniego — Frontend Developer / Team Lead">
+<meta property="og:description" content="12+ years building browser-based slots and table games. Owner of a shared TypeScript game platform behind 80+ titles.">
+<meta property="og:type" content="website">
+<style>
+:root{--bg:#0b0d17;--card:#141828;--text:#e8eaf3;--muted:#9aa1bd;--accent:#f5b83d;--accent2:#7c5cff;--line:#232843}
+@media (prefers-color-scheme:light){:root{--bg:#f6f7fb;--card:#fff;--text:#161a2b;--muted:#5b627e;--accent:#c98600;--accent2:#5b3fe0;--line:#e1e4f0}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+a{color:var(--accent);text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:56px}
+nav b{letter-spacing:.5px}nav div a{margin-left:18px;color:var(--muted);font-size:14px}nav div a:hover{color:var(--accent)}
+.hero{padding:80px 0 56px;background:radial-gradient(600px 300px at 80% 0,color-mix(in srgb,var(--accent2) 30%,transparent),transparent)}
+.tag{color:var(--accent);font-weight:600;font-size:14px;letter-spacing:2px;text-transform:uppercase}
+h1{font-size:clamp(32px,6vw,56px);line-height:1.1;margin:10px 0}
+.hero p{max-width:640px;color:var(--muted);font-size:18px}
+.btns{margin-top:24px;display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:11px 20px;border-radius:10px;font-weight:600;border:1px solid var(--line)}
+.btn.p{background:var(--accent);color:#1a1300;border-color:var(--accent)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:40px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+.stat b{display:block;font-size:30px;color:var(--accent)}.stat span{color:var(--muted);font-size:14px}
+section{padding:56px 0}h2{font-size:28px;margin:0 0 6px}.sub{color:var(--muted);margin:0 0 28px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+.card h3{margin:0 0 8px;font-size:18px}.card p{margin:0;color:var(--muted);font-size:15px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{background:var(--card);border:1px solid var(--line);padding:6px 13px;border-radius:99px;font-size:14px}
+.skillrow{margin-bottom:22px}.skillrow h3{font-size:14px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin:0 0 10px}
+.tabs{display:flex;gap:8px;margin-bottom:20px}
+.tab{background:var(--card);color:var(--text);border:1px solid var(--line);padding:9px 18px;border-radius:99px;cursor:pointer;font:inherit}
+.tab.on{background:var(--accent2);border-color:var(--accent2);color:#fff}
+.shots{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+.shot{display:block;color:inherit;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;cursor:pointer;transition:transform .2s,border-color .2s}
+.shot:hover{transform:translateY(-4px);border-color:var(--accent)}
+.shot .im .play{position:absolute;right:10px;bottom:10px;background:#000a;color:#fff;font-size:12px;padding:3px 10px;border-radius:99px}
+.shot .meta em{font-style:normal;color:var(--accent);font-size:12px;text-transform:uppercase;letter-spacing:1px}
+.list{margin:10px 0 0;padding-left:20px;color:var(--muted);max-width:760px}.list li{margin:6px 0}
+.timeline ul{color:var(--muted);max-width:720px;padding-left:20px}.timeline li{margin:6px 0}
+.steps{counter-reset:s}.steps .card{position:relative;padding-top:44px}
+.steps .card::before{counter-increment:s;content:counter(s);position:absolute;top:14px;left:20px;color:var(--accent);font-weight:700;font-size:20px}
+.shot .im{aspect-ratio:16/9;background:linear-gradient(135deg,var(--accent2),#1b1f3a);display:grid;place-items:center;position:relative}
+.shot img{width:100%;height:100%;object-fit:cover;display:block}
+.shot .im.missing img{display:none}.shot .im.missing::after{content:"Screenshot coming soon";color:#ffffffaa;font-size:14px}
+.shot .meta{padding:12px 14px}.shot .meta b{display:block}.shot .meta span{color:var(--muted);font-size:13px}
+.lb{position:fixed;inset:0;background:#000d;display:none;place-items:center;z-index:20;padding:20px;cursor:zoom-out}
+.lb.on{display:grid}.lb img{max-width:100%;max-height:90vh;border-radius:10px}
+.timeline{border-left:2px solid var(--line);padding-left:20px}
+.timeline h3{margin:0}.timeline small{color:var(--accent)}
+footer{border-top:1px solid var(--line);padding:32px 0;color:var(--muted);font-size:14px;text-align:center}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><b>MCS<span style="color:var(--accent)">.</span></b>
+<div><a href="#about">About</a><a href="#work">Work</a><a href="#games">Games</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#contact">Contact</a></div></div></nav>
+
+<header class="hero"><div class="wrap">
+<div class="tag">iGaming · Frontend · Team Lead</div>
+<h1>Mark Chester Samaniego</h1>
+<p>Frontend Developer and Team Lead with 12+ years building browser-based slots and table games. I own the shared TypeScript game platform behind 80+ titles and lead the developers and QA who ship them.</p>
+<div class="btns"><a class="btn p" href="#games">View games</a><a class="btn" href="https://digitalwin.com/play-demo/" target="_blank" rel="noopener">Play live demos ↗</a><a class="btn" href="#contact">Get in touch</a></div>
+<div class="stats">
+<div class="stat"><b>12+</b><span>years in iGaming</span></div>
+<div class="stat"><b>80+</b><span>slot, RNG table &amp; live table games</span></div>
+<div class="stat"><b>3</b><span>engines: PixiJS, EaselJS, Phaser</span></div>
+<div class="stat"><b>2014</b><span>with Globalnet Solutions Group</span></div>
+</div></div></header>
+
+<section id="about"><div class="wrap">
+<h2>About</h2><p class="sub">Based in the Philippines · Open to remote opportunities</p>
+<p style="max-width:760px">My background is frontend: ActionScript, then HTML5/JS/CSS, with some PHP and Vue 3 along the way. Today I build casino games in TypeScript on PixiJS v8, with Phaser and EaselJS in the mix. I created and maintain the baseclass that all our slots run on, built template slots for the team to reuse, and I’m the escalation point for the hard bugs: rendering, reels, server integration, deployment, anything that’s stuck.</p>
+<p style="max-width:760px;color:var(--muted)">I moved from writing games to leading the people who write them without giving up the code. I still ship features and debug alongside the team, while keeping delivery predictable: clear priorities, reusable building blocks, and QA automation that catches regressions before players do.</p>
+<h3 style="margin:28px 0 4px;font-size:18px">Highlights</h3>
+<ul class="list">
+<li>Designed the shared TypeScript game platform that 80+ slot and table titles are built on.</li>
+<li>Cut new-game effort by turning common slot patterns into reusable template slots and subclassable baseclasses.</li>
+<li>Introduced Playwright-based canvas testing so slot behaviour can be verified automatically.</li>
+<li>Improved the release pipeline with cache-busting so players always load the latest build.</li>
+<li>Lead and mentor a team of developers and QA across the full delivery cycle.</li>
+</ul>
+</div></section>
+
+<section id="work"><div class="wrap">
+<h2>What I do</h2><p class="sub">Engineering, architecture and team leadership</p>
+<div class="grid">
+<div class="card"><h3>Shared game platform</h3><p>Owner of the TypeScript platform spanning PixiJS, EaselJS and Phaser, each with its own shared baseclass, so new titles are built as lightweight subclasses.</p></div>
+<div class="card"><h3>Slots &amp; table games</h3><p>Slot, RNG table and live table games with Spine animation, GSAP-driven sequences and data-driven UI styled with UnoCSS.</p></div>
+<div class="card"><h3>QA automation</h3><p>Automated test infrastructure, including Playwright-based canvas testing for slot games.</p></div>
+<div class="card"><h3>Server &amp; RGS integration</h3><p>Communication layer and PHP gateway connecting game clients to slot and table game endpoints.</p></div>
+<div class="card"><h3>Deploy pipeline</h3><p>Cache-busting and release improvements so players always get the latest build.</p></div>
+<div class="card"><h3>Team leadership</h3><p>Day-to-day management of developers and QA, unblocking the team and resolving the hardest issues.</p></div>
+</div></div></section>
+
+<section id="games"><div class="wrap">
+<h2>Games</h2><p class="sub">Selected work. Open a game to see details, screenshots and a gameplay video.</p>
+<div class="tabs"><button class="tab on" data-f="all">All</button><button class="tab" data-f="slot">Slots</button><button class="tab" data-f="table">Table games</button></div>
+<div class="shots" id="shots"></div>
+</div></section>
+
+<section id="process"><div class="wrap">
+<h2>How I build games</h2><p class="sub">A repeatable path from art hand-off to release</p>
+<div class="grid steps">
+<div class="card"><h3>Start from the platform</h3><p>New titles subclass the shared baseclass, so reels, spin flow, scaling and server calls are solved before game-specific work starts.</p></div>
+<div class="card"><h3>Animate and tune</h3><p>Spine assets and GSAP timelines bring symbols, wins and features to life, tuned for smooth frame rates on mid-range phones.</p></div>
+<div class="card"><h3>Integrate the server</h3><p>The communication layer and PHP gateway connect the client to the RGS, keeping outcomes server-authoritative.</p></div>
+<div class="card"><h3>Test and release</h3><p>Playwright canvas tests, QA passes and a cache-busted deploy get each build to players reliably.</p></div>
+</div></div></section>
+
+<section id="skills"><div class="wrap">
+<h2>Skills</h2><p class="sub">Tools I use every day</p>
+<div class="skillrow"><h3>Game development</h3><div class="chips"><span class="chip">PixiJS v8</span><span class="chip">TypeScript</span><span class="chip">GSAP</span><span class="chip">Spine (spine-pixi-v8)</span><span class="chip">Phaser</span><span class="chip">EaselJS</span></div></div>
+<div class="skillrow"><h3>Frontend</h3><div class="chips"><span class="chip">HTML5</span><span class="chip">JavaScript</span><span class="chip">CSS / UnoCSS</span><span class="chip">Vue 3</span><span class="chip">ActionScript</span></div></div>
+<div class="skillrow"><h3>Quality &amp; backend</h3><div class="chips"><span class="chip">Playwright</span><span class="chip">Test automation</span><span class="chip">PHP</span><span class="chip">RGS integration</span></div></div>
+</div></section>
+
+<section id="experience"><div class="wrap">
+<h2>Experience</h2><p class="sub">Over a decade with one studio, growing from developer to team lead</p>
+<div class="timeline"><small>Feb 2014 — Present</small><h3>Frontend Developer Team Lead · Globalnet Solutions Group Inc.</h3>
+<p style="color:var(--muted);max-width:720px;margin:4px 0 0">Lead the frontend and QA team delivering 80+ slot, RNG table and live table games.</p>
+<ul>
+<li>Created and maintain the shared TypeScript baseclasses for PixiJS, EaselJS and Phaser games.</li>
+<li>Built template slots and reusable modules so new games ship faster with less duplicated code.</li>
+<li>Own the server communication layer and PHP gateway between game clients and RGS endpoints.</li>
+<li>Set up Playwright-based canvas testing and improved build cache-busting and deployment.</li>
+<li>Manage day-to-day priorities for developers and QA, remove blockers and resolve the hardest bugs.</li>
+</ul></div>
+</div></section>
+
+<section id="contact"><div class="wrap">
+<h2>Let’s talk</h2><p class="sub">Open to remote iGaming and game-dev roles.</p>
+<div class="btns" style="margin-top:0">
+<a class="btn p" href="mailto:YOUR_EMAIL@example.com">YOUR_EMAIL@example.com</a>
+<a class="btn" href="https://www.linkedin.com/in/YOUR-PROFILE" target="_blank" rel="noopener">LinkedIn ↗</a>
+<a class="btn" href="https://digitalwin.com/play-demo/" target="_blank" rel="noopener">Portfolio demos ↗</a>
+<a class="btn" href="resume.pdf">Download résumé</a>
+</div></div></section>
+
+<footer><div class="wrap">© <span id="y"></span> Mark Chester Samaniego</div></footer>
+<script src="games.js"></script>
+<script>
+// Game list lives in games.js (edit that file to add or change games).
+const GAMES=window.GAMES,box=document.getElementById("shots");
+function render(f){
+ box.innerHTML="";
+ GAMES.filter(g=>f==="all"||g.cat===f).forEach(g=>{
+  const d=document.createElement("a");d.className="shot";d.href="game.html?id="+encodeURIComponent(g.id);
+  d.innerHTML='<div class="im"><img loading="lazy" alt=""><span class="play">▶ Details &amp; video</span></div><div class="meta"><em></em><b></b><span></span></div>';
+  const im=d.querySelector("img");im.alt=g.title+" screenshot";
+  im.onerror=()=>im.parentElement.classList.add("missing");im.src=g.thumb;
+  d.querySelector("em").textContent=g.type;d.querySelector("b").textContent=g.title;d.querySelector("span").textContent=g.tagline;
+  box.appendChild(d);
+ });
+}
+document.querySelectorAll(".tab").forEach(t=>t.onclick=()=>{
+ document.querySelectorAll(".tab").forEach(x=>x.classList.remove("on"));t.classList.add("on");render(t.dataset.f)});
+document.getElementById("y").textContent=new Date().getFullYear();
+render("all");
+</script>
+</body>
+</html>
